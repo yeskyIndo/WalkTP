@@ -1,0 +1,26 @@
+name: LEETWalkTP_BETA
+main: Yesky\WalkTP\WalkTP
+author: Yesky
+version: 1.0.0
+api: 2.0.0
+
+commands:
+ walktp:
+  usage: "/walktp <set ; edit ; id [blockid] ;help"
+  description: "WalkTP commands."
+  permission: walktp.commands.*
+
+permissions:
+ walktp.*:
+  default: OP
+  children:
+   walktp.commands.*:
+    children:
+     walktp.commands.set:
+     walktp.commands.edit:
+     walktp.commands.id:
+     walktp.commands.help:
+   walktp.use:
+    default: true
+   walktp.delete:
+    default: OP
